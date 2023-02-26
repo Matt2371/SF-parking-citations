@@ -158,3 +158,8 @@ csv/
 # ignore API tokens
 API_token/
 
+# ignore test.csv
+test.csv
+
+# ignore playground
+playground.ipynb
