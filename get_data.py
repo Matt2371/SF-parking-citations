@@ -79,7 +79,7 @@ def geom_counts(connection):
         # Update array of counts
         geom_counts[i] = result['count']
 
-    plt.bar(years, geom_counts)
+    plt.plot(years, geom_counts)
     plt.xlabel('Year')
     plt.ylabel('Coordinates')
     plt.title('Number of coordinates tracked per year')
