@@ -110,13 +110,22 @@ def main():
     connection = sql.connect("sfmta_parking_citations.db")
     cursor = connection.cursor()
 
-    # Save data from 2022 as csv
+    # Save data from 2018-2022 as csv, respectively
     subset_year(connection=connection, year=2022)
+    subset_year(connection=connection, year=2021)
+    subset_year(connection=connection, year=2020)
+    subset_year(connection=connection, year=2019)
+    subset_year(connection=connection, year=2018)
 
-    # Match zip codes with subset of 2022 data, save as csv
+    # Match zip codes with subsets of 2018-2022 data, save as csv, respecitively
     # Read USPS app token
     usps_token = fetch_api.read_token('API_token/usps_userid.txt')
+    # Get data
     zip_codes(year=2022, app_token=usps_token, frac=0.001)
+    zip_codes(year=2021, app_token=usps_token, frac=0.001)
+    zip_codes(year=2020, app_token=usps_token, frac=0.001)
+    zip_codes(year=2019, app_token=usps_token, frac=0.001)
+    zip_codes(year=2018, app_token=usps_token, frac=0.001)
 
     # Get counts of coordinates per year
     geom_counts(connection=connection)

@@ -14,6 +14,7 @@ get_data.py: Subsets data from the database based on year (also adds zipcodes to
 
 
 *** NOTEBOOKS ***
+visualizations.ipynb: Creates visualizations based on subset on the data. Explores citations vs. time of day, estimated revenue vs. zip code, etc...
 
 *** DATA SOURCES ***
 SF Parking Citation Data - https://data.sfgov.org/widgets/ab4h-6ztd
